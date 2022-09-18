@@ -1,0 +1,73 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/base";
+
+
+.container-form {
+    width: 800px;
+    margin: auto;
+    border: 1.5px solid $color-3;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: $color-2;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    @include mobile {
+      width: 330px;
+    }
+    @include tablet {
+      width: 600px;
+    }
+    @include laptop {
+      width: 800px;
+    }
+  
+    .create-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      .form {
+        display: flex;
+        gap: 50px;
+        @include mobile {
+          flex-direction: column;
+        }
+        @include laptop {
+          flex-direction: row;
+        }
+
+        
+        .title-form {
+          border-bottom: 1.5px solid $color-3;
+          font-size: 18px;
+        }
+        
+      }
+    }
+
+    .information, .address {
+      line-height: 2;
+      color : $color-4;
+      font-weight: 700;
+    }
+    
+    .save-button {
+      cursor: pointer;
+      background-color : $color-4;
+      color: $color-2;
+      padding: 10px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 30px;
+      border: 1px solid $color-4;
+      width: 150px;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+ 
+  

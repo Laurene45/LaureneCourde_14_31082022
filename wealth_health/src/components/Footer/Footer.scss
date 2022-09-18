@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/base";
+
+.footer {
+	display: flex;
+	justify-content: center;
+	border-top: 2px solid $color-5;
+	margin-top: 1rem;
+	padding: 2rem 0 1.5rem;
+	text-align: center;
+	@include mobile {
+		font-size: 10px;
+	}
+	@include tablet {
+		font-size: 13px;
+	}
+	@include laptop {
+		font-size: 16px;
+	}
+}
+
+.footer-text {
+	margin: 0;
+	padding: 0;
+}

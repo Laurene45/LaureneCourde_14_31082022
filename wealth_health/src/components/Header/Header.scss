@@ -1,0 +1,60 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/base";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid $color-3;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: $color-2;
+
+    .logo {
+        height: 100px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .title {
+        font-size: 36px;
+        color: $color-4;
+        @include mobile {
+            font-size: 30px;
+        }
+        @include tablet {
+            font-size: 36px;
+        }
+    }
+
+    .add-button {
+        cursor: pointer;
+        background-color: $color-4;
+        color: $color-2;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        border: 1px solid $color-4;
+        margin: 10px;
+        margin-right: 30px;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        @include mobile {
+            padding: 7px;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+        @include tablet {
+            padding: 10px;
+            font-size: 18px;
+            margin-right: 30px;
+          }
+    }
+
+    svg {
+        padding-right: 8px;
+    }
+}

@@ -1,0 +1,163 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/base";
+
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  max-height: 400px;
+  overflow: scroll;
+  max-width: 1200px;
+  margin: auto;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+  @include mobile {
+    font-size: 8px;
+    padding: 2px;
+  }
+
+  @include tablet {
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  @include laptop {
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #5a6f07;
+  color: white;
+  height: 25px;
+}
+
+table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 20px;
+}
+
+table tr:hover {
+  background-color: #d9e1b7;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.table-pagination {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  // max-width: 1124px;
+  border: 1.5px solid #d6d8e7;
+  border-top: none;
+  padding: 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  .pages {
+    padding-top: 3px;
+    padding-right: 20px;
+
+    @include mobile {
+      padding-top: 7px;
+      font-size: 10px;
+    }
+
+    @include tablet {
+      padding-top: 4px;
+      font-size: 14px;
+    }
+
+    @include laptop {
+      padding-top: 3px;
+      font-size: 16px;
+
+    }
+
+  }
+
+  .page-number {
+    width: 50px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .page-size {
+    padding: 6px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+
+    @include mobile {
+      font-size: 10px;
+      padding: 2px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      padding: 4px;
+    }
+
+    @include laptop {
+      font-size: 16px;
+      padding: 6px;
+    }
+  }
+
+  .pagination-button {
+    padding: 2px;
+    border-radius: 5px;
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 18px;
+
+      @include mobile {
+        font-size: 10px;
+      }
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      @include laptop {
+        font-size: 18px;
+      }
+    }
+  }
+}

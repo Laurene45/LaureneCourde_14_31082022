@@ -1,0 +1,15 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/base";
+
+.home-page {
+    padding: 50px;
+    @include mobile {
+      padding: 8px;
+      padding-top: 50px;
+    }
+    @include tablet {
+      padding: 50px;
+    }
+    
+  }
