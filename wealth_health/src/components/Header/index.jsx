@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import logo from './logo.png';
 
+import logo from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +14,7 @@ import './Header.scss';
  * @component
  */
 
-// useLocation: fonction qui renvoie l'objet d'emplacement qui contient des informations sur l'URL actuelle.
+//useLocation: fonction qui renvoie l'objet d'emplacement qui contient des informations sur l'URL actuelle.
 //Chaque fois que l'URL change, un nouvel objet de localisation sera renvoyé.
 
 const Header = () => {
@@ -26,7 +26,6 @@ const Header = () => {
       <span className="title" aria-label="page title">
         HRNET
       </span>
-
       {location.pathname === '/employee-list' ? (
         <Link to="/" className="add-button">
           <i className="fa-solid fa-user-plus">

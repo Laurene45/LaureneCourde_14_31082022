@@ -2,11 +2,9 @@ import React from 'react';
 
 import './Footer.scss';
 
-
-/** @function show footer
- *
+/**
+ * @description Component for showing footer
  * @component
- * @returns (<Footer/>)
  */
 
 const Footer = () => {

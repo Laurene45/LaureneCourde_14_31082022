@@ -5,33 +5,31 @@ import { useTable } from 'react-table';
 import { usePagination } from 'react-table';
 import { useSortBy } from 'react-table';
 import { headerList } from '../../datas/tableHeader';
-//import { mockData } from '../../datas/mockDataEmployees';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpShortWide } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpWideShort } from '@fortawesome/free-solid-svg-icons';
 import { faArrowsUpDown } from '@fortawesome/free-solid-svg-icons';
 
-
-
-
 import './Table.scss';
 
 /**
- * Renders the 'EmployeesTable on current employees Page'
- * @function EmployeesTable
- * @param {array} employees: data
- * @returns {JSX}
+ * @description component Table employee
+ *
+ * @param   {array}  props.data
+ * @returns {Reactnode}   jsx injected in DOM
  */
 
 const EmployeesTable = ({ data }) => {
+  //useMemo : renvoie une valeur mémorisée.
+  //Considère la mémorisation comme la mise en cache d'une valeur afin qu'elle n'ait pas besoin d'être recalculée.
+  // ne s'exécute que lorsque l'une de ses dépendances est mise à jour. Cela peut améliorer les performances.
   const columns = useMemo(() => headerList, []);
-  
 
   // Table instance
+  // useSortBy : implémente le tri des lignes te tris multiples
+  // usePagination :  implémente la pagination des lignes. peut être utilisé pour la pagination côté client ou côté serveur.
   const tableInstance = useTable({ columns, data }, useSortBy, usePagination);
-
-  // comm info: usePagination : implémente la pagination des lignes.Il peut être utilisé pour la pagination côté client ou  côté serveur.
 
   const {
     getTableProps,
@@ -57,7 +55,10 @@ const EmployeesTable = ({ data }) => {
           {headerGroups.map((headerGroup, index) => (
             <tr key={index} {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column, i) => (
-                <th key={i} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                <th
+                  key={i}
+                  {...column.getHeaderProps(column.getSortByToggleProps())}
+                >
                   {column.render('Header')}
 
                   <span>
@@ -65,7 +66,6 @@ const EmployeesTable = ({ data }) => {
                       column.isSortedDesc ? (
                         <i className="fa fa-arrow-up-wide-short icon">
                           <FontAwesomeIcon icon={faArrowUpWideShort} />
-                          
                         </i>
                       ) : (
                         <i className="fa fa-arrow-up-short-wide icon">
@@ -74,9 +74,8 @@ const EmployeesTable = ({ data }) => {
                       )
                     ) : (
                       <i className="fa-solid fa-arrows-up-down icon">
-                        <FontAwesomeIcon icon={faArrowsUpDown } />
-                        
-                    </i>
+                        <FontAwesomeIcon icon={faArrowsUpDown} />
+                      </i>
                     )}
                   </span>
                 </th>
@@ -171,7 +170,6 @@ const EmployeesTable = ({ data }) => {
     </>
   );
 };
-
 
 EmployeesTable.propTypes = {
   data: PropTypes.array,

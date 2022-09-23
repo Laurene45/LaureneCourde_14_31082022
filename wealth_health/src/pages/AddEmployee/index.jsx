@@ -1,5 +1,5 @@
 import React from 'react';
-import CreateForm  from '../../components/CreateForm/index';
+import CreateForm from '../../components/CreateForm/index';
 import './AddEmployee.scss';
 
 /**
@@ -8,7 +8,6 @@ import './AddEmployee.scss';
  *
  * @returns
  */
-
 
 const AddEmployee = () => {
   return (

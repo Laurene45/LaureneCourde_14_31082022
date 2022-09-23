@@ -1,8 +1,9 @@
-import './FormControl.scss';
+import React from 'react';
 import PropTypes from 'prop-types';
+import './FormControl.scss';
 
 /**
- * create form controls
+ * @create form controls
  */
 
 const FormControl = ({
@@ -46,13 +47,11 @@ const FormControl = ({
           aria-labelledby={aria}
           {...register}
         >
-          
-            {options.map((option, i) => (
-              <option value={option.value} key={i}>
-                {option.label}
-              </option>
-            ))}
-        
+          {options.map((option, i) => (
+            <option value={option.value} key={i}>
+              {option.label}
+            </option>
+          ))}
         </select>
       );
       break;
