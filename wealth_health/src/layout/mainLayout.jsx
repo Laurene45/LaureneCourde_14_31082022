@@ -5,7 +5,7 @@ import Header from '../components/Header/index';
 import Footer from '../components/Footer/index';
 
 /**
- * @description render header and childs
+ * @description render header and children
  * @component
  *
  * @returns
