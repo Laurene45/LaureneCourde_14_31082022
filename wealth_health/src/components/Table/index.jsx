@@ -21,16 +21,8 @@ import './Table.scss';
  */
 
 const EmployeesTable = ({ data }) => {
-  //useMemo : renvoie une valeur mémorisée.
-  //Considère la mémorisation comme la mise en cache d'une valeur afin qu'elle n'ait pas besoin d'être recalculée.
-  // ne s'exécute que lorsque l'une de ses dépendances est mise à jour. Cela peut améliorer les performances.
   const columns = useMemo(() => headerList, []);
-
-  // Table instance
-  // useSortBy : implémente le tri des lignes te tris multiples
-  // usePagination :  implémente la pagination des lignes. peut être utilisé pour la pagination côté client ou côté serveur.
   const tableInstance = useTable({ columns, data }, useSortBy, usePagination);
-
   const {
     getTableProps,
     getTableBodyProps,

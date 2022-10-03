@@ -14,9 +14,6 @@ import './Header.scss';
  * @component
  */
 
-//useLocation: fonction qui renvoie l'objet d'emplacement qui contient des informations sur l'URL actuelle.
-//Chaque fois que l'URL change, un nouvel objet de localisation sera renvoyé.
-
 const Header = () => {
   const location = useLocation();
 

@@ -14,9 +14,6 @@ import './Search.scss';
  */
 
 const SearchInput = ({ onSearch }) => {
-  // Quand il y a possibilité de plusieurs render qui se déclenchent plusieurs fois de suite
-  // useAsyncDebounce : contrer les effets secondaires rapides et d'utiliser uniquement le dernier.
-
   const handleChange = useAsyncDebounce((value) => {
     onSearch(value || undefined);
   }, []);

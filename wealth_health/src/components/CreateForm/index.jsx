@@ -10,7 +10,7 @@ import { states } from '../../datas/states';
 import { department } from '../../datas/department';
 
 import Modal from '../../components/Modal/index';
-import logo from '../../components/Modal/logo.png';
+//import logo from '../../components/Modal/logo.png';
 
 import './CreateForm.scss';
 
@@ -51,14 +51,14 @@ const CreateForm = () => {
   return (
     <div className="container-form">
       <Modal  // modal create employee success
-        image={logo}
+        //image={logo}
         onClose={() => {
           setShowModal(false);
           console.log('close event fired');
         }}
         show={showModal}
-        title="Succes"
-        text="New employe has been created"
+        title="Success"
+        //text="New employe has been created"
       />
 
       <form className="create-form" onSubmit={handleSubmit(submitForm)}>
