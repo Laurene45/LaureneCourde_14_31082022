@@ -9,9 +9,6 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistStore } from 'redux-persist';
 import './sass/main.scss';
 
-// PersistGate: retarde le rendu de l'UI de votre appl jusqu'à ce que votre état persistant ait été récupéré et enregistré dans redux.
-// PersistStore : garantit que votre état redux est enregistré dans le stockage persistant chaque fois qu'il change.
-
 function App() {
   let persistor = persistStore(store);
 
