@@ -21,6 +21,7 @@ const FormControl = ({
   let formInput;
 
   const error = formState?.errors?.[name];
+  
 
   switch (inputType) {
     //firstname, lastname, street, city

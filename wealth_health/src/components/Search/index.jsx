@@ -24,6 +24,7 @@ const SearchInput = ({ onSearch }) => {
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </i>
       <input
+        aria-label="cost-input"
         className="search-input"
         type="search"
         placeholder="Search an employee"

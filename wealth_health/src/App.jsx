@@ -8,6 +8,9 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistStore } from 'redux-persist';
 import './sass/main.scss';
+import 'lc_modal_custom_projet14/dist/index.jsx.css';
+
+
 
 function App() {
   let persistor = persistStore(store);

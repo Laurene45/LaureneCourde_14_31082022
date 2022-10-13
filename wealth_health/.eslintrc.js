@@ -7,7 +7,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:storybook/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -21,5 +20,4 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
   },
-
 };
