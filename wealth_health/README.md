@@ -74,4 +74,12 @@ Here is the list of currently used jQuery plugins that need to be converted:
 The App runs on  [http://localhost:3000/](http://localhost:3000/)
 
 
-## My coverted Plugin (StoryBook) : Modal
+##  Plugin Modal (StoryBook) : 
+Version : 0.2.0
+
+ -  Run StoryBook : `npm run storybook`
+ -  Package NPM : [lc_modal_custom_projet14](https://www.npmjs.com/package/lc_modal_custom_projet14)
+ - Package sur Github : [LaureneCourde_14_31082022_Modal](https://github.com/Laurene45/LaureneCourde_14_31082022_Modal)
+ 
+ 
+
