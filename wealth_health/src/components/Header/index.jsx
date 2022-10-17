@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <div className="header" aria-label="page header">
-      <img className="logo" src={logo} alt="logo"/>
+      <img className="logo" src={logo} alt="logo" />
       <span className="title" aria-label="page title">
         HRNET
       </span>
@@ -31,7 +31,11 @@ const Header = () => {
           <span>Add employee</span>
         </Link>
       ) : (
-        <Link to="/employee-list" className="add-button" data-testid="add-button">
+        <Link
+          to="/employee-list"
+          className="add-button"
+          data-testid="add-button"
+        >
           <i className="fa-solid fa-user">
             <FontAwesomeIcon icon={faUser} />
           </i>

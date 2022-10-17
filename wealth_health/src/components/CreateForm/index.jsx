@@ -9,9 +9,8 @@ import { useDispatch } from 'react-redux';
 import { states } from '../../datas/states';
 import { department } from '../../datas/department';
 
-//import Modal from '../../components/Modal/index';
-//import logo from '../../components/Modal/logo.png';
 import { Modal } from 'lc_modal_custom_projet14';
+import logo from '../../components/Header/logo.png';
 
 import './CreateForm.scss';
 
@@ -53,17 +52,16 @@ const CreateForm = () => {
   return (
     <div className="container-form">
       <Modal // modal create employee success
-        //image={logo}
         onClose={() => {
           setShowModal(false);
-          console.log('close event fired');
         }}
         show={showModal}
-        title={'succcess'}
+        title={'Succcess'}
+        footer={'Close'}
       >
         New employe has been created
       </Modal>
-
+      
       <form className="create-form" onSubmit={handleSubmit(submitForm)}>
         <div className="form">
           <div className="information">
@@ -163,7 +161,12 @@ const CreateForm = () => {
             />
           </div>
         </div>
-        <button className="save-button" type="submit" aria-label="save button">
+        <button
+          className="save-button"
+          type="submit"
+          aria-label="save button"
+          data-testid="save-button"
+        >
           Save
         </button>
       </form>
@@ -172,14 +175,3 @@ const CreateForm = () => {
 };
 
 export default CreateForm;
-
-/*<Modal  // modal create employee success
-        //image={logo}
-        onClose={() => {
-          setShowModal(false);
-          console.log('close event fired');
-        }}
-        show={showModal}
-        title="Success"
-        //text="New employe has been created"
-      />*/

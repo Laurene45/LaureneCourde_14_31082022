@@ -11,7 +11,6 @@ import './sass/main.scss';
 import 'lc_modal_custom_projet14/dist/index.jsx.css';
 
 
-
 function App() {
   let persistor = persistStore(store);
 
