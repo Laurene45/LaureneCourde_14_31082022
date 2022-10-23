@@ -11,9 +11,20 @@
     background-color: $color-2;
 
     .logo {
+        width : 100px;
         height: 100px;
         -o-object-fit: cover;
         object-fit: cover;
+        
+        @include mobile {
+            width : 70px;
+            height: 70px;
+        }
+        
+        @include tablet {
+            width : 100px;
+            height: 100px;
+        }
     }
 
     .title {

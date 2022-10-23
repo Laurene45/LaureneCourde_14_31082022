@@ -10,7 +10,6 @@ import { states } from '../../datas/states';
 import { department } from '../../datas/department';
 
 import { Modal } from 'lc_modal_custom_projet14';
-import logo from '../../components/Header/logo.png';
 
 import './CreateForm.scss';
 
@@ -45,7 +44,7 @@ const CreateForm = () => {
       })
     );
     setShowModal(true);
-    console.log(setShowModal(true)); // undefined
+    console.log(setShowModal(true));
     reset();
   };
 
@@ -61,7 +60,7 @@ const CreateForm = () => {
       >
         New employe has been created
       </Modal>
-      
+    
       <form className="create-form" onSubmit={handleSubmit(submitForm)}>
         <div className="form">
           <div className="information">
@@ -72,7 +71,7 @@ const CreateForm = () => {
               label="First name"
               placeholder="first name"
               style={{ width: 200 }}
-              aria="fist name"
+              aria="first name"
               formState={formState}
               register={register('firstName', { required: true })}
             />

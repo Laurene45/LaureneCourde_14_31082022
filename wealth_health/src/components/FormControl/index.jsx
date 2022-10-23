@@ -32,7 +32,8 @@ const FormControl = ({
           className={!!error ? 'invalid' : ''}
           type="text"
           aria-labelledby={aria}
-          {...register}
+          {...register} 
+          id = {name}
         />
       );
       break;
@@ -46,6 +47,7 @@ const FormControl = ({
           className={!!error ? 'invalid' : ''}
           aria-labelledby={aria}
           {...register}
+          id = {name}
         >
           {options.map((option, i) => (
             <option value={option.value} key={i}>
@@ -67,6 +69,7 @@ const FormControl = ({
             type="date"
             aria-labelledby={aria}
             {...register}
+            id = {name} 
           />
           {error?.message && (
             <span style={{ color: 'red' }}>{error.message}</span>
@@ -85,6 +88,7 @@ const FormControl = ({
           type="number"
           aria-labelledby={aria}
           {...register}
+          id = {name} 
         />
       );
       break;
@@ -94,7 +98,7 @@ const FormControl = ({
 
   return (
     <div className="form-control" style={{ ...style }}>
-      <span className="label">{label || name}</span> {formInput}
+      <label className="label"  htmlFor= {name}>{label || name}</label> {formInput}
     </div>
   );
 };
@@ -110,6 +114,7 @@ FormControl.propTypes = {
   options: PropTypes.array,
   formState: PropTypes.any,
   style: PropTypes.any,
+  id: PropTypes.string,
 };
 
 export default FormControl;

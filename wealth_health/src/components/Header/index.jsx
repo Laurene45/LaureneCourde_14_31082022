@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-import logo from './logo.png';
+import logo from './logo-min.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <div className="header" aria-label="page header">
-      <img className="logo" src={logo} alt="logo" />
+      <img fetchpriority="high" className="logo" src={logo} alt="logo" />
       <span className="title" aria-label="page title">
         HRNET
       </span>
