@@ -21,7 +21,7 @@ const EmployeListPage = () => {
   const updateEmployees = useSelector((state) => state.employeeList); // create employees array
   const [filteredList, setFilteredList] = useState(updateEmployees.employees);
   const [searchText, setSearchText] = useState('');
-  //const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(() => {
     // recharge mockData array

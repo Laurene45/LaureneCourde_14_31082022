@@ -60,7 +60,7 @@ const CreateForm = () => {
       >
         New employe has been created
       </Modal>
-    
+
       <form className="create-form" onSubmit={handleSubmit(submitForm)}>
         <div className="form">
           <div className="information">
