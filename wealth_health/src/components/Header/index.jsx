@@ -24,7 +24,7 @@ const Header = () => {
         HRNET
       </span>
       {location.pathname === '/employee-list' ? (
-        <Link to="/" className="add-button" data-testid="add-button">
+        <Link to="/" className="add-button">
           <i className="fa-solid fa-user-plus">
             <FontAwesomeIcon icon={faUserPlus} />
           </i>
@@ -34,7 +34,6 @@ const Header = () => {
         <Link
           to="/employee-list"
           className="add-button"
-          data-testid="add-button"
         >
           <i className="fa-solid fa-user">
             <FontAwesomeIcon icon={faUser} />

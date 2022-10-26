@@ -164,7 +164,6 @@ const CreateForm = () => {
           className="save-button"
           type="submit"
           aria-label="save button"
-          data-testid="save-button"
         >
           Save
         </button>
