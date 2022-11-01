@@ -14,7 +14,7 @@
     "date-fns": "^2.29.2",
     "eslint": "^8.25.0",
     "jest-watcher": "^29.1.0",
-    "lc_modal_custom_projet14": "^0.2.0",
+    "lc_modal_custom_projet14": "^0.2.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
