@@ -44,7 +44,6 @@ const CreateForm = () => {
       })
     );
     setShowModal(true);
-    console.log(setShowModal(true));
     reset();
   };
 
